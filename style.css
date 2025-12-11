@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+
+section div.background-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    object-fit: cover;
+    z-index: -1; /* MUITO IMPORTANTE → deixa atrás da navbar e do conteúdo */
+    will-change: transform;
+}
+
+nav ul{
+display: flex;
+list-style-type: none;
+justify-content: center;
+align-items: center;
+gap: 50px;
+padding: 30px 60px 20px 60px;
+border-bottom: 3px solid rgb(0, 0, 0);
+}
+
+nav a {
+    display: block; 
+    cursor: pointer;
+    transition: transform .1s ease;
+}
+
+
+nav a:hover {
+    transform: scale(1.15);
+    color: gray;
+}
+
+
+/* -------- MENU -------- */
+
+.menu {
+    position: fixed; /* fixa no canto */
+    bottom: 5px;
+    left: 1530px;
+    z-index: 10;
+}
+
+.menu-trigger {    
+    display: grid;
+    place-items: center;
+    padding: 0.6em;
+    cursor: pointer;
+    background: none;
+}
+
+.menu-trigger img {
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 30px black;
+    transition: transform 0.5s ease-out;
+     
+}
+
+.menu-menu {
+    position: absolute;
+    bottom: 60px;  /* abre pra cima */
+    left: 0;
+    display: none;
+    background: none;
+    padding: 8px 6px;
+    gap: 15px;
+}
+
+.menu-menu li {
+    list-style: none;
+    margin: 8px 0;
+}
+
+/* Ícones gerais */
+.menu-menu li img {
+    width: 40px;
+    display: block; 
+    margin: 4px;
+    cursor: pointer;
+    transition: transform .1s ease;
+}
+
+.menu-menu li img:hover {
+    transform: scale(1.15);
+}
+
+@keyframes girarInfinitamente {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+}
+
+.menu-trigger i img:hover {
+    animation: girarInfinitamente 5s linear infinite;
+}
+
+/* Ícones individuais (edição separada) */
+.icon-discord {
+    filter: brightness(0.9);
+}
+
+.icon-whatsapp {
+    filter: saturate(1.3);
+    
+}
+
+.icon-tiktok {
+    filter: brightness(0.9);
+}
+
+/* Quando aberto */
+.menu[data-aberto="true"] .menu-menu {
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.about-me h1{
+    text-align: center;
+    margin-top: 60px;
+}
+.about-me h2{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+hr{
+    border: none;
+    height: 2px;
+    background-color: black;
+    width: 6%;
+    margin: -40px auto;
+}
+
+
+    
+
+
+
+
+
+
+
+
+
+
