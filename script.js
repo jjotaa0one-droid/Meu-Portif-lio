@@ -22,3 +22,4 @@ trigger.addEventListener('mouseover', () => {
 trigger.addEventListener('mouseout', () => {
     musiquinha1.pause();         // Pausa
 });
+
