@@ -1,0 +1,108 @@
+.navbar {
+  display: flex;
+  justify-content: center; /* centraliza os links */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  background: transparent;
+  z-index: 100;
+}
+
+
+
+/* Centraliza os links */
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Taskbar */
+.taskbar {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  margin: 0;
+  padding: 20px 60px 15px 60px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.13);
+  border-radius: 80px;
+  border-bottom: 5px solid rgb(0, 0, 0);
+}
+
+.taskbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  
+}
+
+.taskbar li a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 600;
+  transition: transform .1s ease;
+}
+
+.taskbar li a:hover {
+  transform: scale(1.15);
+  color: red;
+}
+
+/* Menu trigger no canto direito */
+.menu {
+  position: relative;
+  right: -25px; /* fixa no canto direito */
+  top: -15px;
+}
+
+.menu-trigger img {
+  width: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.5s ease-out;
+  animation: girarInfinitamente 5s linear infinite;
+}
+
+@keyframes girarInfinitamente {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Submenu abre ao lado do trigger */
+.menu-menu {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  display: none;
+  flex-direction: row;
+  gap: 15px;
+  list-style: none;
+  background-color: rgba(0,0,0,0.322);
+  width: 165px;
+  padding: 6px;
+  border-radius: 45px;
+}
+
+
+
+.menu-menu li img {
+  width: 40px;
+  cursor: pointer;
+  transition: transform .1s ease;
+}
+
+.menu-menu li img:hover {
+  transform: scale(1.15);
+}
+
+.menu[data-aberto="true"] .menu-menu {
+  display: flex;
+}
