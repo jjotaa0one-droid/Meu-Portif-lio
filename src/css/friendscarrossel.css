@@ -17,7 +17,7 @@
 h1.titulo-botao3 {
   position: relative;
   top: -580px; /* sobe o texto acima do balão */
-  left: 85%;
+  left: 84.4%;
   transform: translateX(-50%); /* centraliza */
   font-size: 25px;
   color: yellow;
@@ -66,4 +66,5 @@ h1.titulo-botao3 {
 @keyframes flutuar {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
+
 }
