@@ -1,0 +1,45 @@
+.projetos-codigo h2 {
+  display: flex;
+  font-size: 25px;
+  color: white;
+  
+}
+
+.projetos-codigo {
+  padding: 80px;
+  color: white;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  margin-top: 60px;
+}
+
+
+.grid-codigo {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.codigo-card {
+  background-color: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.codigo-card a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.codigo-card a:hover {
+  text-decoration: underline;
+}
+
+.projetos-codigo {
+  margin-top: 150px; /* ou um valor menor, tipo 10px */
+}
