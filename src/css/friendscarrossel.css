@@ -17,7 +17,7 @@
 h1.titulo-botao3 {
   position: relative;
   top: -580px; /* sobe o texto acima do balão */
-  left: 89%;
+  left: 84%;
   transform: translateX(-50%); /* centraliza */
   font-size: 25px;
   color: yellow;
