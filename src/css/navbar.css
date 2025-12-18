@@ -106,3 +106,39 @@
 .menu[data-aberto="true"] .menu-menu {
   display: flex;
 }
+
+/* -------- RESPONSIVO -------- */
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: flex; /* empilha tudo */
+    padding: 8px;
+  }
+
+  .taskbar {
+    position: absolute;
+    flex-direction: flex; /* links em coluna */
+    gap: 15px;
+    padding: 8px 12px;
+    border-radius: 25px;
+    left: 13%;
+  }
+
+  .taskbar li a {
+    font-size: 14px;
+  }
+
+
+  .menu-trigger img {
+    width: 28px;
+
+    top: -150;
+    
+  }
+
+  .menu-menu {
+    width: 120px;
+    padding: 4px;
+  }
+}
+

@@ -1,7 +1,20 @@
+/* Balão */
+.carrossel-balao {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-end; /* alinha à esquerda */
+  margin-right: -70px;
+  margin-top: -580px;
+}
+
+.carrossel-container{
+  position: relative; /* permite posicionar o texto em cima */
+  width: 400px;
+  height: 220px; /* altura total incluindo o texto */
+}
 .amigoscarrossel {
-  position: absolute;
-  right: 40px;
-  top: 150px;
+  right: 15px;
   width: 250px;
   height: 600px;
   border-radius: 45px;
@@ -12,22 +25,25 @@
   display: flex;
   flex-direction: column;
   animation: flutuar 3s ease-in-out infinite;
+  
 }
 
+/* Título preso ao balão */
 h1.titulo-botao3 {
-  position: relative;
-  top: -580px; /* sobe o texto acima do balão */
-  left: 84.4%;
-  transform: translateX(-50%); /* centraliza */
+  position: absolute;   /* agora depende do balão */
+  top: -45px;           /* sobe um pouco acima do balão */
+  left: 12%;            /* centraliza horizontalmente */
+  transform: translateX(-50%);
   font-size: 25px;
   color: yellow;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.12);
   border-bottom: 2px solid rgb(0, 0, 0);
-  width: 10%;
+  width: 40%;           /* ocupa boa parte da largura do balão */
   border-radius: 15px;
   animation: flutuar 3s ease-in-out infinite, piscarRGB 2s infinite;
 }
+
 
 @keyframes piscarRGB {
   0% { color: pink; }
@@ -92,7 +108,7 @@ h1.titulo-botao3 {
 
 @media (max-width: 480px) {
   .amigoscarrossel {
-    right: 5px;
+    right: 4px;
     top: 80px;
     width: 150px;
     height: 300px;

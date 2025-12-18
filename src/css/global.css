@@ -32,10 +32,56 @@ section div.background-section video {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   backdrop-filter: blur(1px);
   pointer-events: none; /* não atrapalha cliques */
   z-index: -1; /* fica acima do vídeo mas abaixo do conteúdo */
 }
+
+/* -------- CONFIGURAÇÃO PARA CELULAR -------- */
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto; /* permite rolagem no celular */
+    font-size: 15px;  /* fonte menor para telas pequenas */
+  }
+
+  section div.background-section video {
+    height: 150%; /* ajusta vídeo para caber na tela */
+    left: -50%;
+    width: 150%;
+    object-fit: cover; /* garante que o vídeo preencha */
+    
+}
+
+
+  .blur-overlay {
+    backdrop-filter: blur(2px); /* aumenta o blur para dar contraste */
+  }
+
+  /* Exemplo: se tiver menus ou textos */
+  h1, h2, p {
+    font-size: 90%; /* reduz tamanho da tipografia */
+    text-align: center; /* centraliza para mobile */
+  }
+
+  .container {
+    padding: 10px; /* menos espaçamento lateral */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px; /* ainda menor para celulares bem pequenos */
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
 
 

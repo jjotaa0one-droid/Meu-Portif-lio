@@ -19,22 +19,7 @@
   border-radius: 60px;
 }
 
-/* --- RESPONSIVIDADE --- */
-/* quando a tela for menor que 768px, diminui a escala do balão */
-@media (max-width: 768px) {
-  .container-botao {
-    transform: scale(0.8);   /* reduz 20% */
-    transform-origin: top left; /* mantém posição sem deslocar */
-  }
-}
 
-/* quando a tela for bem pequena (ex: celular) */
-@media (max-width: 480px) {
-  .container-botao {
-    transform: scale(0.6);   /* reduz 40% */
-    transform-origin: top left;
-  }
-}
 
 .titulo-botao {
   position: absolute;
@@ -154,6 +139,8 @@
   0%, 100% { color: red; }
   50% { color: transparent; }
 } 
+
+
 
 
 
